@@ -1,0 +1,7 @@
+{
+  "name": "WikiTeq",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

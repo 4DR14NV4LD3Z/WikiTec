@@ -1,0 +1,93 @@
+<body>
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="success" hideBackButton><br><br><br>
+        <ion-title>REGISTRO</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        <form [formGroup]="form" (ngSubmit)="saveEntry()">
+            <ion-item-group>
+                <ion-list>
+                    <ion-item-divider color="light">Nombre</ion-item-divider>
+                    <ion-item>
+                        <ion-input
+                            type="text"
+                            placeholder="Ingresa tu nombre..."
+                            formControlName="name"
+                            [(ngModel)]="userName" ></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-list>
+                    <ion-item-divider color="light">Apellidos</ion-item-divider>
+                    <ion-item>
+                        <ion-input
+                                type="text"
+                                placeholder="Ingresa tus apellidos..."
+                                formControlName="surnames"
+                                [(ngModel)]="userSurnames" ></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-list>
+                    <ion-item-divider color="light">Correo Electronico</ion-item-divider>
+                    <ion-item>
+                        <ion-input
+                                type="email"
+                                placeholder="Ingresa tu correo..."
+                                formControlName="email"
+                                [(ngModel)]="userEmail" ></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-list>
+                    <ion-item-divider color="light">Contraseña</ion-item-divider>
+                    <ion-item>
+                        <ion-input
+                                type="{{type}}"
+                                placeholder="Ingresa tu contraseña..."
+                                formControlName="password"
+                                [(ngModel)]="userPass" ></ion-input>
+                        <ion-icon
+                                name="{{eyes}}"
+                                color="#9B9B9B"
+                                item-right (click)="showHide()"></ion-icon>
+                    </ion-item>
+                </ion-list>
+            </ion-item-group>
+            <ion-item-group>
+                <ion-list>
+                    <ion-item-divider color="light">Fecha de Nacimiento</ion-item-divider>
+                    <ion-item>
+                        <ion-input
+                                type="date"
+                                placeholder="Ingresa tu fecha de nacimiento..."
+                                formControlName="date"
+                                [(ngModel)]="userDate" ></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-item-group>
+            <ion-item>
+                <button
+                        ion-button
+                        color="primary"
+                        text-center
+                        block
+                        [disabled]="!form.valid">Registrar</button>
+            </ion-item>
+
+        </form>
+    </div>
+</ion-content>
+</body>

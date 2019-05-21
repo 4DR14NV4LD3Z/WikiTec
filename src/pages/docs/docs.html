@@ -1,0 +1,27 @@
+<!--
+  Generated template for the DocsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton color="success"><br><br><br>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let item of items">
+    <h2>{{ item.nombre_archivo }} </h2>
+    
+    <p>
+    <button
+            ion-button
+            color="primary"
+            item-right
+            full
+            (click)="downloadAndOpenPdf(item.ruta)"
+            >View</button>
+  </ion-item>
+
+</ion-content>
